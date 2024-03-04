@@ -35,6 +35,7 @@ namespace kikskibidi
                     {
                         RowSpacing = 0,
                         ColumnSpacing = 0,
+                        Margin = new Thickness(3),
                     };
                     Grid.SetRow(grid, i);
                     Grid.SetColumn(grid, j);
