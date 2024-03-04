@@ -20,5 +20,14 @@ namespace kikskibidi
         {
 
         }
+
+        private void DisplayWin()
+        {
+            if (turn)
+                DisplayAlert("Koniec gry!", "Wygrywa x!", "ciezko pracuje");
+            else
+                DisplayAlert("Koniec gry!", "Wygrywa x!", "ciezko pracuje");
+
+        }
     }
 }
