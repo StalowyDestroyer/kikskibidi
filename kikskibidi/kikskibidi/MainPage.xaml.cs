@@ -95,6 +95,16 @@ namespace kikskibidi
             }
         }
 
+        private void EnableGrid(int gridToEnable)
+        {
+            ((Grid)MainGrid.Children[gridToEnable]).BackgroundColor = Color.Transparent;
+            foreach(Button button in ((Grid)MainGrid.Children[gridToEnable]).Children)
+            {
+                if (string.IsNullOrEmpty(button.Text))
+                    button.ClassId = "enabled";
+            }
+        }
+
         private void Restart(object sender, EventArgs e)
         {
             CreateBoard();
