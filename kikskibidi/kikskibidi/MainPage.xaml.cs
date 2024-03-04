@@ -61,5 +61,13 @@ namespace kikskibidi
                 DisplayAlert("Koniec gry!", "Wygrywa o!", "ciezko pracuje");
         }
         
+        private void ChangeTurn()
+        {
+            turn=!turn;
+            if (turn)
+                TurnLabel.Text = "Kolejka: x";
+            else
+                TurnLabel.Text = "Kolejka: o";
+        }
     }
 }
