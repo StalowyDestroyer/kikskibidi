@@ -69,5 +69,11 @@ namespace kikskibidi
             else
                 TurnLabel.Text = "Kolejka: o";
         }
+        private void DisableAll()
+        {
+            foreach (Grid grid in MainGrid.Children)
+                foreach (Button button in grid.Children)
+                    button.ClassId = "disabled";
+        }
     }
 }
