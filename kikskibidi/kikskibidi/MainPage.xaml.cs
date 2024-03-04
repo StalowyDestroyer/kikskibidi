@@ -63,6 +63,38 @@ namespace kikskibidi
             }
         }
 
+        private void Move(object sender, EventArgs e)
+        {
+            Button clickedField = sender as Button;
+
+            if(clickedField.ClassId == "enabled")
+            {
+                if(turn)
+                {
+                    clickedField.Text = "x";
+                    clickedField.BackgroundColor = Color.DarkSlateBlue;
+                }
+                else
+                {
+                    clickedField.Text = "o";
+                    clickedField.BackgroundColor = Color.DarkSlateGray;
+                }
+
+                DisableAll();
+
+                Grid parent = clickedField.Parent as Grid;
+                parent.BackgroundColor = Color.LightGray;
+
+                if (CheckForWin(parent))
+                    return;
+
+                int gridToEnable = parent.Children.IndexOf(clickedField);
+                EnableGrid(gridToEnable);
+
+                ChangeTurn();
+            }
+        }
+
         private void Restart(object sender, EventArgs e)
         {
             CreateBoard();
