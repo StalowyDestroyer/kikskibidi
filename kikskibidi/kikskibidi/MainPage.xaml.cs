@@ -53,6 +53,7 @@ namespace kikskibidi
             }
             return false;
         }
+
         private void DisplayWin()
         {
             if (turn)
