@@ -10,9 +10,15 @@ namespace kikskibidi
 {
     public partial class MainPage : ContentPage
     {
+        private bool turn = true;
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private void Restart(object sender, EventArgs e)
+        {
+
         }
     }
 }
